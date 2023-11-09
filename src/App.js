@@ -48,8 +48,8 @@ function App() {
         <img src={eleventhjpg} style={{width:'100%',height:'100%'}}/>
         <style>{shakeKeyframes}</style>
         <div style={{ width: '100%', height: 100, backgroundColor: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <button style={{borderColor:'white',borderRadius:30,width:'30%',height:'40%',color: 'white',backgroundColor:'blue', animation: 'shake 0.5s' }} onClick={() => console.log('Button Clicked')}>
-            지금 무표 체험하기
+          <button style={{borderColor:'white',borderRadius:30,width:'30%',height:'40%',color: 'white',backgroundColor:'blue', animation: 'shake 0.5s' }} onClick={() => window.location.href = 'https://m.place.naver.com/place/1216958182/ticket?entry=pll'}>
+              지금 무표 체험하기
           </button>
         </div>   
     </div>

@@ -11,8 +11,8 @@ import eightthjpg from './8.png'
 import ninethjpg from './9.png'
 import tenthjpg from './10.png'
 import eleventhjpg from './11.png'
-import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 
 const shakeKeyframes = `
@@ -31,6 +31,12 @@ const shakeKeyframes = `
 
 function App() {
    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+   const location = useLocation();
+
+   useEffect(() => {
+     window.gtag('config', 'G-0RCDWEEBWK', { page_path: location.pathname });
+   }, [location.pathname]);
+ 
 
   
   return (

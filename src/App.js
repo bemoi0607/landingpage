@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import firstjpg from './1.png'
-import secondjpg from './2.jpg'
+import secondjpg from './2.png'
 import thirdjpg from './3.png'
 import fourthjpg from './4.png'
 import fifthjpg from './5.png'

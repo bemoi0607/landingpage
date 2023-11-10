@@ -12,7 +12,11 @@ import ninethjpg from './9.png'
 import tenthjpg from './10.png'
 import eleventhjpg from './11.png'
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Router, useLocation } from 'react-router-dom';
+import ReactGA from 'react-ga4'
+
+
+ReactGA.initialize("G-0RCDWEEBWK")
 
 
 const shakeKeyframes = `
@@ -30,17 +34,67 @@ const shakeKeyframes = `
 `;
 
 function App() {
+ 
+  
    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
    const location = useLocation();
+   const [entryTime, setEntryTime] = useState(Date.now());
+ 
+   useEffect(() => {
+     // Record entry time
+     setEntryTime(Date.now());
+ 
+     window.gtag('config', 'G-0RCDWEEBWK', { page_path: location.pathname });
+ 
+     // Attach scroll event listener
+     const handleScroll = () => {
+       // Track scroll event
+       ReactGA.event({
+         category: 'Scroll',
+         action: 'Scroll',
+         label: 'User Scrolled',
+       });
+     };
+ 
+     window.addEventListener('scroll', handleScroll);
+ 
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+
+      // Calculate time spent on the page and send an event
+      const timeSpent = Math.floor((Date.now() - entryTime) / 1000); // Convert to seconds
+      ReactGA.event({
+        category: 'Time',
+        action: 'Page View',
+        label: `Time Spent on Page: ${timeSpent} seconds`,
+      });
+    };
+  }, [location.pathname, entryTime]);
+
+  
+
+  
 
    useEffect(() => {
      window.gtag('config', 'G-0RCDWEEBWK', { page_path: location.pathname });
    }, [location.pathname]);
+
+   const handleButtonClick = () => {
+    // Track button click event
+    ReactGA.event({
+      category: 'Button',
+      action: 'Click',
+      label: 'Free Trial Button',
+    });
+
+    // Redirect to the specified URL
+    window.location.href = 'https://m.place.naver.com/place/1216958182/ticket?entry=pll';
+  };
  
 
-  
   return (
-    
+
     <div className="App">
         <img src={firstjpg} style={{width:'100%',height:'100%'}}/>
         <img src={secondjpg} style={{width:'100%',height:'100%'}}/>
@@ -55,12 +109,11 @@ function App() {
         <img src={eleventhjpg} style={{width:'100%',height:'100%'}}/>
         <style>{shakeKeyframes}</style>
         <div style={{ width: '100%', height: 100, backgroundColor: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <button style={{borderColor:'white',borderRadius:30,width:'30%',height:'40%',color: 'white',backgroundColor:'blue', animation: 'shake 0.5s' }} onClick={() => window.location.href = 'https://m.place.naver.com/place/1216958182/ticket?entry=pll'}>
+          <button style={{borderColor:'white',borderRadius:30,width:'30%',height:'40%',color: 'white',backgroundColor:'blue', animation: 'shake 0.5s' }} onClick={handleButtonClick}>
               지금 무료 체험하기
           </button>
         </div>   
     </div>
-    
   );
 }
 

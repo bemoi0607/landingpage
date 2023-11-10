@@ -4,8 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter} from "react-router-dom";
+import { ga } from 'react-ga';
 
-const gaMeasurementId = process.env.REACT_APP_GA_MEASUREMENT_ID;
+const gaMeasurementId = ga.env.REACT_APP_GA_MEASUREMENT_ID;
 
 if (gaMeasurementId) {
   // GA4 초기화

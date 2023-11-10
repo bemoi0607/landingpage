@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/landingpage/static/css/main.073c9b0a.css",
-    "main.js": "/landingpage/static/js/main.f2a5a168.js",
+    "main.js": "/landingpage/static/js/main.5d6d7249.js",
     "static/js/787.66b477fd.chunk.js": "/landingpage/static/js/787.66b477fd.chunk.js",
     "static/media/8.png": "/landingpage/static/media/8.a0533e63fed3883ef5d0.png",
     "static/media/7.png": "/landingpage/static/media/7.8cbb8ea7850cd6750f5c.png",
-    "static/media/1.png": "/landingpage/static/media/1.f9a499eef40fc8c53d33.png",
-    "static/media/3.png": "/landingpage/static/media/3.3040974d3d1b3360abd7.png",
-    "static/media/4.png": "/landingpage/static/media/4.d4bae71903ba46434a19.png",
-    "static/media/5.png": "/landingpage/static/media/5.eeeb9463a3a70ee26c3f.png",
+    "static/media/2.png": "/landingpage/static/media/2.dd97673ded89629e4049.png",
+    "static/media/5.png": "/landingpage/static/media/5.91fbeb7c9692d26fa328.png",
+    "static/media/4.png": "/landingpage/static/media/4.a67827d6cb3b658ab12f.png",
+    "static/media/3.png": "/landingpage/static/media/3.423a696f6594b0de2c51.png",
     "static/media/11.png": "/landingpage/static/media/11.bdb9377c4a24dabad8ca.png",
+    "static/media/1.png": "/landingpage/static/media/1.e8905c27b29c6b159208.png",
     "static/media/9.png": "/landingpage/static/media/9.d740eb9f284161d79322.png",
-    "static/media/2.jpg": "/landingpage/static/media/2.08700a546b7ac4cee4a6.jpg",
     "static/media/6.png": "/landingpage/static/media/6.6218faf25c73f9c74d10.png",
     "static/media/10.png": "/landingpage/static/media/10.72e2a4550cfb6e3a48dd.png",
     "static/media/logo.svg": "/landingpage/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/landingpage/index.html",
     "main.073c9b0a.css.map": "/landingpage/static/css/main.073c9b0a.css.map",
-    "main.f2a5a168.js.map": "/landingpage/static/js/main.f2a5a168.js.map",
+    "main.5d6d7249.js.map": "/landingpage/static/js/main.5d6d7249.js.map",
     "787.66b477fd.chunk.js.map": "/landingpage/static/js/787.66b477fd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.f2a5a168.js"
+    "static/js/main.5d6d7249.js"
   ]
 }

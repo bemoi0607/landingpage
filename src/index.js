@@ -7,6 +7,7 @@ import { BrowserRouter} from "react-router-dom";
 import { ga } from 'react-ga';
 
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

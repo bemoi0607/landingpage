@@ -13,9 +13,7 @@ import tenthjpg from './10.png'
 import eleventhjpg from './11.png'
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import ReactGA from "react-ga";
-import RouteChangeTracker from './RouteChangeTracker';
-import {Routes } from "react-router-dom";
+
 
 const shakeKeyframes = `
   @keyframes shake {
@@ -32,7 +30,6 @@ const shakeKeyframes = `
 `;
 
 function App() {
-  RouteChangeTracker();
    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   

@@ -80,12 +80,38 @@ function App() {
      window.gtag('config', 'G-0RCDWEEBWK', { page_path: location.pathname });
    }, [location.pathname]);
 
-   const handleButtonClick = () => {
+   const handleButtonClick1 = () => {
     // Track button click event
     ReactGA.event({
       category: 'Button',
       action: 'Click',
-      label: 'Free Trial Button',
+      label: '더 알아보기',
+    });
+
+    // Redirect to the specified URL
+    window.location.href = 'https://m.place.naver.com/place/1216958182/ticket?entry=pll';
+  };
+
+  const handleButtonClick2 = () => {
+    // Track button click event
+    ReactGA.event({
+      category: 'Button',
+      action: 'Click',
+      label: 'PT 신청하기',
+    });
+
+    // Redirect to the specified URL
+    window.location.href = 'https://m.place.naver.com/place/1216958182/ticket?entry=pll';
+  };
+
+
+
+   const handleButtonClic3 = () => {
+    // Track button click event
+    ReactGA.event({
+      category: 'Button',
+      action: 'Click',
+      label: '무료체험 버튼',
     });
 
     // Redirect to the specified URL
@@ -104,12 +130,28 @@ function App() {
         <img src={sixthjpg} style={{width:'100%',height:'100%'}}/>
         <img src={seventhjpg} style={{width:'100%',height:'100%'}}/>
         <img src={eightthjpg} style={{width:'100%',height:'100%'}}/>
+        <div style={{ width: '100%', height: 100, backgroundColor: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <button style={{borderColor:'blue',borderRadius:30,width:'30%',height:'40%', fontWeight:'bold',color: 'blue',backgroundColor:'white', animation: 'shake 0.5s' }} onClick={handleButtonClick1}>
+              더 알아보기
+          </button>
+        </div>
+        <div style={{ width: '100%', height: 100, backgroundColor: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        </div>     
         <img src={ninethjpg} style={{width:'100%',height:'100%'}}/>
+        <div style={{ width: '100%', height: 100, backgroundColor: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <button style={{borderColor:'blue',borderRadius:30,width:'30%',height:'40%',fontWeight:'bold',color: 'blue',backgroundColor:'white', animation: 'shake 0.5s' }} onClick={handleButtonClick2}>
+            PT 신청하기
+          </button>
+        </div>
+        <div style={{ width: '100%', height: 100, backgroundColor: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        </div>  
         <img src={tenthjpg} style={{width:'100%',height:'100%'}}/>
+        <div style={{ width: '100%', height: 100, backgroundColor: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        </div>     
         <img src={eleventhjpg} style={{width:'100%',height:'100%'}}/>
         <style>{shakeKeyframes}</style>
         <div style={{ width: '100%', height: 100, backgroundColor: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <button style={{borderColor:'white',borderRadius:30,width:'30%',height:'40%',color: 'white',backgroundColor:'blue', animation: 'shake 0.5s' }} onClick={handleButtonClick}>
+          <button style={{borderColor:'white',borderRadius:30,width:'30%',height:'40%',color: 'white',backgroundColor:'blue', animation: 'shake 0.5s' }} onClick={handleButtonClic3}>
               지금 무료 체험하기
           </button>
         </div>   

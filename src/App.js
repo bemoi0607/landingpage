@@ -32,40 +32,15 @@ import twentysix from './images/26.png';
 import twentyseven from './images/27.png';
 import twentyeight from './images/28.png';
 import twentynine from  './images/29.png';
+import TagManager from 'react-gtm-module';
+
 
 
 function App() {
   const scrollDepthRef = useRef([]);
   const location = useLocation();
 
-  useEffect(() => {
-    // Google Analytics 초기화
-    ReactGA.initialize("G-DQG0CNHPVS");
 
-    // 페이지뷰 전송
-    ReactGA.send({ hitType: 'pageview', page: location.pathname });
-
-    // 스크롤 이벤트 리스너 등록
-    const handleScroll = () => {
-      const currentScroll = window.scrollY || document.documentElement.scrollTop;
-      const lastScrollDepth = scrollDepthRef.current[scrollDepthRef.current.length - 1] || 0;
-      const newDepth = Math.max(currentScroll, lastScrollDepth);
-      scrollDepthRef.current.push(newDepth);
-
-      // Google Analytics에 스크롤 깊이 이벤트 전송
-      ReactGA.event({
-        category: 'Scroll',
-        action: 'Depth',
-        label: `User scrolled to depth ${newDepth}px`,
-      });
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [location.pathname]);
 
   const handleButtonClick1 = () => {
     // Track button click event

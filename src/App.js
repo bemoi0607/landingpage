@@ -41,7 +41,7 @@ function App() {
   
 
    useEffect(()=>{
-    ReactGA.initialize("G-DVT7ED8YJ6") 
+    ReactGA.initialize("G-2TXVQPMM9K") 
    })
 
   

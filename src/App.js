@@ -34,69 +34,17 @@ import twentyeight from './images/28.png';
 import twentynine from  './images/29.png';
 
 
-ReactGA.initialize("G-0RCDWEEBWK")
 
-
-const shakeKeyframes = `
-  @keyframes shake {
-    0%, 100% {
-      transform: translateX(0);
-    }
-    25%, 75% {
-      transform: translateX(-5px);
-    }
-    50% {
-      transform: translateX(5px);
-    }
-  }
-`;
 
 function App() {
  
   
-   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-   const location = useLocation();
-   const [entryTime, setEntryTime] = useState(Date.now());
- 
-   useEffect(() => {
-     // Record entry time
-     setEntryTime(Date.now());
- 
-     window.gtag('config', 'G-0RCDWEEBWK', { page_path: location.pathname });
- 
-     // Attach scroll event listener
-     const handleScroll = () => {
-       // Track scroll event
-       ReactGA.event({
-         category: 'Scroll',
-         action: 'Scroll',
-         label: 'User Scrolled',
-       });
-     };
- 
-     window.addEventListener('scroll', handleScroll);
- 
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-
-      // Calculate time spent on the page and send an event
-      const timeSpent = Math.floor((Date.now() - entryTime) / 1000); // Convert to seconds
-      ReactGA.event({
-        category: 'Time',
-        action: 'Page View',
-        label: `Time Spent on Page: ${timeSpent} seconds`,
-      });
-    };
-  }, [location.pathname, entryTime]);
+   useEffect(()=>{
+    ReactGA.initialize("G-DVT7ED8YJ6") 
+   })
 
   
-
-  
-
-   useEffect(() => {
-     window.gtag('config', 'G-0RCDWEEBWK', { page_path: location.pathname });
-   }, [location.pathname]);
 
    const handleButtonClick1 = () => {
     // Track button click event
@@ -124,7 +72,7 @@ function App() {
 
 
 
-   const handleButtonClic3 = () => {
+   const handleButtonClick3 = () => {
     // Track button click event
     ReactGA.event({
       category: 'Button',
@@ -143,7 +91,7 @@ function App() {
     <div className="App">
       <img src={one}  style={{width:'100%',height:'100%'}} />
       <div style={{ width: '100%', height: 100, backgroundColor: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <button style={{borderColor:'blue',borderRadius:30,width:'30%',height:'40%',fontWeight:'bold',color: 'blue',backgroundColor:'white', animation: 'shake 0.5s' }} onClick={handleButtonClick1}>
+        <button style={{borderColor:'blue',borderRadius:30,width:'30%',height:'40%',fontWeight:'bold',color: 'blue',backgroundColor:'white'}} onClick={handleButtonClick1}>
               선생님 더 알아보기
         </button>
       </div>
@@ -171,14 +119,14 @@ function App() {
       <img src={twentythree}  style={{width:'100%',height:'100%'}} />
       <img src={twentyfour}  style={{width:'100%',height:'100%'}} />
       <div style={{ width: '100%', height: 100, backgroundColor: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <button style={{borderColor:'blue',borderRadius:30,width:'30%',height:'40%',fontWeight:'bold',color: 'blue',backgroundColor:'white', animation: 'shake 0.5s' }} onClick={handleButtonClick2}>
+        <button style={{borderColor:'blue',borderRadius:30,width:'30%',height:'40%',fontWeight:'bold',color: 'blue',backgroundColor:'white'}} onClick={handleButtonClick2}>
               PT 신청하기
         </button>
       </div>
       <img src={twentysix}  style={{width:'100%',height:'100%'}} />
       <img src={twentyseven}  style={{width:'100%',height:'100%'}} />
       <div style={{ width: '100%', height: 50, backgroundColor: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <button style={{borderColor:'blue',borderRadius:30,width:'30%',height:'80%',fontWeight:'bold',color: 'blue',backgroundColor:'white', animation: 'shake 0.5s' }} onClick={handleButtonClick2}>
+        <button style={{borderColor:'blue',borderRadius:30,width:'30%',height:'80%',fontWeight:'bold',color: 'blue',backgroundColor:'white'}} onClick={handleButtonClick3}>
               지금 무료 체험하기
         </button>
       </div>

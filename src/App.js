@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Router, useLocation } from 'react-router-dom';
 import ReactGA from 'react-ga4'
 import one from './images/1.png';

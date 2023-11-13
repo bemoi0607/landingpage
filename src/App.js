@@ -33,7 +33,7 @@ import twentyseven from './images/27.png';
 import twentyeight from './images/28.png';
 import twentynine from  './images/29.png';
 import TagManager from 'react-gtm-module';
-import TagManager from 'react-gtm-module';
+
 
 
 function App() {
